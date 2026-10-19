@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>   
+</head>
+<body>
+    <header><h1>SCSC3203 – Special Topics</h1></header>
+    <table>
+        <tr><th>Name</th><td th:text="${name}"></td></tr>
+        <tr><th>Email</th><td th:text="${email}"></td></tr>
+        <tr><th>Programme</th><td th:text="${programme}"></td></tr>
+        <tr><th>Year</th><td th:text="${year}"></td></tr>
+    </table>
+    <h3>Courses this semester:</h3>
+    <ul>
+        <li th:each="course : ${courses}" th:text="${course}"></li>
+    </ul>
+</body>
+    <p><a href="/">Back to home</a></p>
+</html>
